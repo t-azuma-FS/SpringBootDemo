@@ -6,7 +6,7 @@
     </head>
     <body>
         <h1>User Administration</h1>
-        <br>
+        <p>Login User : [[${#httpServletRequest.remoteUser}]]</p>
 
         <p><a th:href="@{/index}">ホームページ</a></p>
             <form th:action="@{/logout}" method="post">

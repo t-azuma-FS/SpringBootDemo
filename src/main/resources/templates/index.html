@@ -6,7 +6,8 @@
     </head>
     <body>
         <h1>WELCOME!</h1>
-        <br>
+
+        <p>Login User : [[${#httpServletRequest.remoteUser}]]</p>
 
         <p><a th:href="@{/msgctrl}">メッセ―ジ登録/表示</a></p>
         <p><a th:href="@{/useradmin}">ユーザー管理</a></p>
