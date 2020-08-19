@@ -1,11 +1,16 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
-<h1>Hello World</h1>
-<p>Demo application built by Gradle</p>
-</body>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+    <head>
+        <meta charset="UTF-8">
+        <title>SpringSecurity　Demo</title>
+    </head>
+    <body>
+        <h1>WELCOME!</h1>
+        <br>
+
+        <p><a th:href="@{/msgctrl}">メッセ―ジ登録/表示</a></p>
+        <p><a th:href="@{/useradmin}">ユーザー管理</a></p>
+
+        <form th:action="@{/logout}" method="post"><input type="submit" value="Sign Out"/></form>
+    </body>
 </html>
