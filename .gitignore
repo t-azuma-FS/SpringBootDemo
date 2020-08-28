@@ -13,6 +13,7 @@ build/
 .settings
 .springBeans
 .sts4-cache
+.temp-SpringBootDemo - SpringBootDemoApplication-classpath-arg-*.txt
 
 ### IntelliJ IDEA ###
 .idea

@@ -6,12 +6,25 @@
     </head>
     <body>
         <h1>Message Control</h1>
+        <h2 th:text="${test}"></h2>
+        <p>show message:[[${test}]]
+
+        <table border="1">
+        	<tr>
+        		<th>element</th>
+        	</tr>
+
+        	<tr th:each="element : ${list}">
+        		<td th:text="${element}"></td>
+        	</tr>
+        </table>
+
         <p>Login User : [[${#httpServletRequest.remoteUser}]]</p>
         <br>
 
         <p><a th:href="@{/}">ホームページ</a></p>
 
-　　        <form th:action="@{/logout}" method="post">
+            <form th:action="@{/logout}" method="post">
             <input type="submit" value="Sign Out"/></form>
     </body>
 </html>
