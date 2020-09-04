@@ -6,21 +6,20 @@
     </head>
     <body>
         <h1>Message Control</h1>
-        <h2 th:text="${test}"></h2>
-        <p>show message:[[${test}]]
+        <p>Login User : [[${userid}]]</p>
+        <br>
 
         <table border="1">
         	<tr>
-        		<th>element</th>
+        		<th>text</th>
+        		<th>timestamp</th>
         	</tr>
 
         	<tr th:each="element : ${list}">
-        		<td th:text="${element}"></td>
+        		<td th:text="${element.text}"></td>
+        		<td th:text="${element.datetime}"></td>
         	</tr>
         </table>
-
-        <p>Login User : [[${#httpServletRequest.remoteUser}]]</p>
-        <br>
 
         <p><a th:href="@{/}">ホームページ</a></p>
 
