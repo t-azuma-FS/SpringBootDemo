@@ -6,6 +6,7 @@
     </head>
     <body>
         <h1>Message Control</h1>
+		<form th:action="@{/inputmsg}" method="POST">
         <p>Login User : [[${userid}]]</p>
         <br>
 
@@ -20,6 +21,12 @@
         		<td th:text="${element.datetime}"></td>
         	</tr>
         </table>
+
+
+			<p><label>Message:<input type ="text" name="text" size="40"></label></p>
+			<p><input type="submit" value="送信"> <input type="reset" value="リセット"></p>
+		</form>
+
 
         <p><a th:href="@{/}">ホームページ</a></p>
 

@@ -25,19 +25,6 @@ public class MessageService {
 
 	public void createMessage( String text, String userid) {
 
-		String lastMessage;
-		int header;
-
-		lastMessage = messageDao.findLast( userid );
-		if (lastMessage == "") {
-			header = 1;
-		} else {
-			String[] tokens = lastMessage.split(" ");
-			header = Integer.parseInt(tokens[0]);
-			header = header + 1;
-		}
-
-		text = header + " " + text;
 		message.setText( text );
 		message.setUserid( userid );
 

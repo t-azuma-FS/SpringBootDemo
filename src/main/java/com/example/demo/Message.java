@@ -19,10 +19,6 @@ public class Message implements Serializable {
 	@Size(min=1, max=16)
 	private String userid;
 
-	public Message() {
-
-	}
-
 	public void setUserid( String userid) {
 		this.userid=userid;
 	}
